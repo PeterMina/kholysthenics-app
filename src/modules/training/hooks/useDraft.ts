@@ -1,6 +1,6 @@
 import { useLocalStorage } from '@mantine/hooks';
 import { useMemo } from 'react';
-import { draftKey, emptyDraft, type LogDraft } from '@/modules/training/utils';
+import { draftKey, emptyDraft, reconcileDraft, type LogDraft } from '@/modules/training/utils';
 import { todayIso } from '@/shared/utils';
 import { checkKeepingOrder, logDraftSchema, type Session } from '@/shared/validators';
 
@@ -9,7 +9,7 @@ type DraftState = [LogDraft, (next: LogDraft) => void, () => void];
 /** The unsent log for one session, kept on the phone until it is logged. */
 export const useDraft = (session: Session): DraftState => {
   const fallback = useMemo(() => emptyDraft(session, todayIso()), [session]);
-  const [draft, setDraft, removeDraft] = useLocalStorage<LogDraft>({
+  const [stored, setDraft, removeDraft] = useLocalStorage<LogDraft>({
     key: draftKey(session._id),
     defaultValue: fallback,
     getInitialValueInEffect: false,
@@ -23,5 +23,7 @@ export const useDraft = (session: Session): DraftState => {
       }
     },
   });
+  // The plan may have changed since the draft was saved; keep it loggable.
+  const draft = useMemo(() => reconcileDraft(stored, session), [stored, session]);
   return [draft, setDraft, removeDraft];
 };
