@@ -1,8 +1,7 @@
-import { z } from 'zod';
 import { LAST_SYNC_KEY } from '@/shared/constants';
 import { GitHubError, type GitHubErrorKind } from '@/shared/services';
 import { readJson, SessionsFileError, writeJson } from '@/shared/utils';
-import type { PendingChange, Session } from '@/shared/validators';
+import { lastSyncSchema, type PendingChange, type Session } from '@/shared/validators';
 import { dropPending, mergeUpserts, pushPending, readCachedSessions, readPending, writeCachedSessions, type SyncDeps } from '.';
 
 export type SyncProblemKind = GitHubErrorKind | 'invalid_file' | 'no_token';
@@ -20,7 +19,6 @@ export interface SessionsSnapshot {
 }
 
 const NO_TOKEN: SyncProblem = { kind: 'no_token', message: 'Add your GitHub token in Setup.' };
-const lastSyncSchema = z.string();
 
 const problemFor = (error: unknown): SyncProblem => {
   if (error instanceof GitHubError) return { kind: error.kind, message: error.message };
@@ -42,7 +40,7 @@ const offlineSnapshot = (problem: SyncProblem): SessionsSnapshot => {
   };
 };
 
-export const loadSessions = async (deps: SyncDeps | null): Promise<SessionsSnapshot> => {
+const syncOnce = async (deps: SyncDeps | null): Promise<SessionsSnapshot> => {
   if (!deps) return offlineSnapshot(NO_TOKEN);
   const pending = readPending();
   try {
@@ -56,4 +54,17 @@ export const loadSessions = async (deps: SyncDeps | null): Promise<SessionsSnaps
   } catch (error) {
     return offlineSnapshot(problemFor(error));
   }
+};
+
+let lastRun: Promise<SessionsSnapshot> | null = null;
+
+/**
+ * Runs one sync at a time. A refetch can start while an earlier one is still
+ * in flight; overlapping runs would each drop "their" count of queued changes.
+ */
+export const loadSessions = (deps: SyncDeps | null): Promise<SessionsSnapshot> => {
+  const previous = lastRun;
+  const run = (previous ? previous.catch(() => null) : Promise.resolve(null)).then(() => syncOnce(deps));
+  lastRun = run;
+  return run;
 };

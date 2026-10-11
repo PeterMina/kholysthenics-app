@@ -72,6 +72,28 @@ describe('loadSessions', () => {
     expect(snapshot.problem?.kind).toBe('network');
   });
 
+  it('runs one sync at a time so a queued undo is never dropped', async () => {
+    let active = 0;
+    let maxActive = 0;
+    const slow: SyncDeps = {
+      fetchFile: async () => {
+        active += 1;
+        maxActive = Math.max(maxActive, active);
+        await new Promise((resolve) => setTimeout(resolve, 5));
+        active -= 1;
+        return { sessions: fixtureSessions(), sha: 's' };
+      },
+      putFile: async () => 's2',
+    };
+    enqueuePending({ upserts: [done('52')], message: 'first' });
+    const firstRun = loadSessions(slow);
+    enqueuePending({ upserts: [done('53')], message: 'second' });
+    const secondRun = loadSessions(slow);
+    await Promise.all([firstRun, secondRun]);
+    expect(maxActive).toBe(1);
+    expect(readPending()).toEqual([]);
+  });
+
   it('asks for a token when none is stored', async () => {
     expect((await loadSessions(null)).problem?.kind).toBe('no_token');
   });
