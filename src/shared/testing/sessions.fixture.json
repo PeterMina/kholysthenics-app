@@ -1,0 +1,1459 @@
+[
+ {
+  "block": "archive",
+  "day": 1,
+  "handwritten": true,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-07",
+  "notesText": "Day 1 — journal text removed from this public test copy. ✅",
+  "order": -51,
+  "status": "done",
+  "title": "Day 1 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h01"
+ },
+ {
+  "block": "archive",
+  "day": 2,
+  "handwritten": true,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-08",
+  "notesText": "Day 2 — journal text removed from this public test copy. ✅",
+  "order": -50,
+  "status": "done",
+  "title": "Day 2 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h02"
+ },
+ {
+  "block": "archive",
+  "day": 3,
+  "handwritten": true,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-09",
+  "notesText": "Day 3 — journal text removed from this public test copy. ✅",
+  "order": -49,
+  "status": "done",
+  "title": "Day 3 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h03"
+ },
+ {
+  "block": "archive",
+  "day": 12,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-09",
+  "notesText": "Day 12 — journal text removed from this public test copy. ✅",
+  "order": -48,
+  "status": "done",
+  "title": "Day 12 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h04"
+ },
+ {
+  "block": "archive",
+  "day": 4,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-18",
+  "notesText": "Day 4 — journal text removed from this public test copy. ✅",
+  "order": -47,
+  "status": "done",
+  "title": "Day 4 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h05"
+ },
+ {
+  "block": "archive",
+  "day": 5,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-20",
+  "notesText": "Day 5 — journal text removed from this public test copy. ✅",
+  "order": -46,
+  "status": "done",
+  "title": "Day 5 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h06"
+ },
+ {
+  "block": "archive",
+  "day": 6,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-21",
+  "notesText": "Day 6 — journal text removed from this public test copy. ✅",
+  "order": -45,
+  "status": "done",
+  "title": "Day 6 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h07"
+ },
+ {
+  "block": "archive",
+  "day": 7,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-26",
+  "notesText": "Day 7 — journal text removed from this public test copy. ✅",
+  "order": -44,
+  "status": "done",
+  "title": "Day 7 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h08"
+ },
+ {
+  "block": "archive",
+  "day": 8,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-27",
+  "notesText": "Day 8 — journal text removed from this public test copy. ✅",
+  "order": -43,
+  "status": "done",
+  "title": "Day 8 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h09"
+ },
+ {
+  "block": "archive",
+  "day": 9,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-29",
+  "notesText": "Day 9 — journal text removed from this public test copy. ✅",
+  "order": -42,
+  "status": "done",
+  "title": "Day 9 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h10"
+ },
+ {
+  "block": "archive",
+  "day": 10,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-04-30",
+  "notesText": "Day 10 — journal text removed from this public test copy. ✅",
+  "order": -41,
+  "status": "done",
+  "title": "Day 10 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h11"
+ },
+ {
+  "block": "archive",
+  "day": 11,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-06",
+  "notesText": "Day 11 — journal text removed from this public test copy. ✅",
+  "order": -40,
+  "status": "done",
+  "title": "Day 11 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h12"
+ },
+ {
+  "block": "archive",
+  "day": 13,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-10",
+  "notesText": "Day 13 — journal text removed from this public test copy. ✅",
+  "order": -39,
+  "status": "done",
+  "title": "Day 13 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h13"
+ },
+ {
+  "block": "archive",
+  "day": 13,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-12",
+  "notesText": "Day 13 — journal text removed from this public test copy. ✅",
+  "order": -38,
+  "status": "done",
+  "title": "Day 13 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h14"
+ },
+ {
+  "block": "archive",
+  "day": 14,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-14",
+  "notesText": "Day 14 — journal text removed from this public test copy. ✅",
+  "order": -37,
+  "status": "done",
+  "title": "Day 14 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h15"
+ },
+ {
+  "block": "archive",
+  "day": 15,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-17",
+  "notesText": "Day 15 — journal text removed from this public test copy. ✅",
+  "order": -36,
+  "status": "done",
+  "title": "Day 15 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h16"
+ },
+ {
+  "block": "archive",
+  "day": 16,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-20",
+  "notesText": "Day 16 — journal text removed from this public test copy. ✅",
+  "order": -35,
+  "status": "done",
+  "title": "Day 16 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h17"
+ },
+ {
+  "block": "archive",
+  "day": 17,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-23",
+  "notesText": "Day 17 — journal text removed from this public test copy. ✅",
+  "order": -34,
+  "status": "done",
+  "title": "Day 17 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h18"
+ },
+ {
+  "block": "archive",
+  "day": 18,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-25",
+  "notesText": "Day 18 — journal text removed from this public test copy. ✅",
+  "order": -33,
+  "status": "done",
+  "title": "Day 18 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h19"
+ },
+ {
+  "block": "archive",
+  "day": 19,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-26",
+  "notesText": "Day 19 — journal text removed from this public test copy. ✅",
+  "order": -32,
+  "status": "done",
+  "title": "Day 19 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h20"
+ },
+ {
+  "block": "archive",
+  "day": 20,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-05-30",
+  "notesText": "Day 20 — journal text removed from this public test copy. ✅",
+  "order": -31,
+  "status": "done",
+  "title": "Day 20 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h21"
+ },
+ {
+  "block": "archive",
+  "day": 21,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-03",
+  "notesText": "Day 21 — journal text removed from this public test copy. ✅",
+  "order": -30,
+  "status": "done",
+  "title": "Day 21 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h22"
+ },
+ {
+  "block": "archive",
+  "day": 22,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-05",
+  "notesText": "Day 22 — journal text removed from this public test copy. ✅",
+  "order": -29,
+  "status": "done",
+  "title": "Day 22 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h23"
+ },
+ {
+  "block": "archive",
+  "day": 23,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-08",
+  "notesText": "Day 23 — journal text removed from this public test copy. ✅",
+  "order": -28,
+  "status": "done",
+  "title": "Day 23 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h24"
+ },
+ {
+  "block": "archive",
+  "day": 24,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-10",
+  "notesText": "Day 24 — journal text removed from this public test copy. ✅",
+  "order": -27,
+  "status": "done",
+  "title": "Day 24 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h25"
+ },
+ {
+  "block": "archive",
+  "day": 25,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-13",
+  "notesText": "Day 25 — journal text removed from this public test copy. ✅",
+  "order": -26,
+  "status": "done",
+  "title": "Day 25 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h26"
+ },
+ {
+  "block": "archive",
+  "day": 26,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-16",
+  "notesText": "Day 26 — journal text removed from this public test copy. ✅",
+  "order": -25,
+  "status": "done",
+  "title": "Day 26 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h27"
+ },
+ {
+  "block": "archive",
+  "day": 27,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-22",
+  "notesText": "Day 27 — journal text removed from this public test copy. ✅",
+  "order": -24,
+  "status": "done",
+  "title": "Day 27 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h28"
+ },
+ {
+  "block": "archive",
+  "day": 28,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-24",
+  "notesText": "Day 28 — journal text removed from this public test copy. ✅",
+  "order": -23,
+  "status": "done",
+  "title": "Day 28 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h29"
+ },
+ {
+  "block": "archive",
+  "day": 29,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-26",
+  "notesText": "Day 29 — journal text removed from this public test copy. ✅",
+  "order": -22,
+  "status": "done",
+  "title": "Day 29 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h30"
+ },
+ {
+  "block": "archive",
+  "day": 30,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-28",
+  "notesText": "Day 30 — journal text removed from this public test copy. ✅",
+  "order": -21,
+  "status": "done",
+  "title": "Day 30 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h31"
+ },
+ {
+  "block": "archive",
+  "day": 30,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-06-30",
+  "notesText": "Day 30 — journal text removed from this public test copy. ✅",
+  "order": -20,
+  "status": "done",
+  "title": "Day 30 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h32"
+ },
+ {
+  "block": "archive",
+  "day": 31,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-01",
+  "notesText": "Day 31 — journal text removed from this public test copy. ✅",
+  "order": -19,
+  "status": "done",
+  "title": "Day 31 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h33"
+ },
+ {
+  "block": "archive",
+  "day": 32,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-04",
+  "notesText": "Day 32 — journal text removed from this public test copy. ✅",
+  "order": -18,
+  "status": "done",
+  "title": "Day 32 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h34"
+ },
+ {
+  "block": "archive",
+  "day": 33,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-06",
+  "notesText": "Day 33 — journal text removed from this public test copy. ✅",
+  "order": -17,
+  "status": "done",
+  "title": "Day 33 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h35"
+ },
+ {
+  "block": "archive",
+  "day": 34,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-09",
+  "notesText": "Day 34 — journal text removed from this public test copy. ✅",
+  "order": -16,
+  "status": "done",
+  "title": "Day 34 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h36"
+ },
+ {
+  "block": "archive",
+  "day": 35,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-11",
+  "notesText": "Day 35 — journal text removed from this public test copy. ✅",
+  "order": -15,
+  "status": "done",
+  "title": "Day 35 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h37"
+ },
+ {
+  "block": "archive",
+  "day": 36,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-14",
+  "notesText": "Day 36 — journal text removed from this public test copy. ✅",
+  "order": -14,
+  "status": "done",
+  "title": "Day 36 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h38"
+ },
+ {
+  "block": "archive",
+  "day": 37,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-20",
+  "notesText": "Day 37 — journal text removed from this public test copy. ✅",
+  "order": -13,
+  "status": "done",
+  "title": "Day 37 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h39"
+ },
+ {
+  "block": "archive",
+  "day": 38,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-22",
+  "notesText": "Day 38 — journal text removed from this public test copy. ✅",
+  "order": -12,
+  "status": "done",
+  "title": "Day 38 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h40"
+ },
+ {
+  "block": "archive",
+  "day": 39,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-26",
+  "notesText": "Day 39 — journal text removed from this public test copy. ✅",
+  "order": -11,
+  "status": "done",
+  "title": "Day 39 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h41"
+ },
+ {
+  "block": "archive",
+  "day": 40,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-29",
+  "notesText": "Day 40 — journal text removed from this public test copy. ✅",
+  "order": -10,
+  "status": "done",
+  "title": "Day 40 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h42"
+ },
+ {
+  "block": "archive",
+  "day": 41,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-07-31",
+  "notesText": "Day 41 — journal text removed from this public test copy. ✅",
+  "order": -9,
+  "status": "done",
+  "title": "Day 41 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h43"
+ },
+ {
+  "block": "archive",
+  "day": 42,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-02",
+  "notesText": "Day 42 — journal text removed from this public test copy. ✅",
+  "order": -8,
+  "status": "done",
+  "title": "Day 42 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h44"
+ },
+ {
+  "block": "archive",
+  "day": 43,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-05",
+  "notesText": "Day 43 — journal text removed from this public test copy. ✅",
+  "order": -7,
+  "status": "done",
+  "title": "Day 43 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h45"
+ },
+ {
+  "block": "archive",
+  "day": 44,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-09",
+  "notesText": "Day 44 — journal text removed from this public test copy. ✅",
+  "order": -6,
+  "status": "done",
+  "title": "Day 44 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h46"
+ },
+ {
+  "block": "archive",
+  "day": 45,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-15",
+  "notesText": "Day 45 — journal text removed from this public test copy. ✅",
+  "order": -5,
+  "status": "done",
+  "title": "Day 45 Legs",
+  "type": "Legs",
+  "week": 0,
+  "work": [],
+  "_id": "h47"
+ },
+ {
+  "block": "archive",
+  "day": 46,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-18",
+  "notesText": "Day 46 — journal text removed from this public test copy. ✅",
+  "order": -4,
+  "status": "done",
+  "title": "Day 46 Supersets",
+  "type": "Supersets",
+  "week": 0,
+  "work": [],
+  "_id": "h48"
+ },
+ {
+  "block": "archive",
+  "day": 47,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-20",
+  "notesText": "Day 47 — journal text removed from this public test copy. ✅",
+  "order": -3,
+  "status": "done",
+  "title": "Day 47 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h49"
+ },
+ {
+  "block": "archive",
+  "day": 48,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-08-22",
+  "notesText": "Day 48 — journal text removed from this public test copy. ✅",
+  "order": -2,
+  "status": "done",
+  "title": "Day 48 Push",
+  "type": "Push",
+  "week": 0,
+  "work": [],
+  "_id": "h50"
+ },
+ {
+  "block": "archive",
+  "day": 49,
+  "handwritten": false,
+  "historical": true,
+  "lifts": [],
+  "log": {},
+  "loggedAt": "2026-09-01",
+  "notesText": "Day 49 — journal text removed from this public test copy. ✅",
+  "order": -1,
+  "status": "done",
+  "title": "Day 49 Pull",
+  "type": "Pull",
+  "week": 0,
+  "work": [],
+  "_id": "h51"
+ },
+ {
+  "block": "50-61",
+  "day": 50,
+  "lifts": [
+   {
+    "best": 40,
+    "increment": 2.5,
+    "incrementFast": 5,
+    "key": "pullup",
+    "load": 20,
+    "name": "Weighted pull ups",
+    "repMax": 5,
+    "repMin": 3,
+    "sets": 3
+   }
+  ],
+  "log": {
+   "done": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true
+   },
+   "lifts": {
+    "pullup": [
+     {
+      "kg": 20,
+      "reps": 5
+     },
+     {
+      "kg": 20,
+      "reps": 5
+     },
+     {
+      "kg": 20,
+      "reps": 5
+     }
+    ]
+   },
+   "notes": ""
+  },
+  "loggedAt": "2026-09-10",
+  "order": 1,
+  "skill": {
+   "name": "Front lever — tuck hold",
+   "target": "5 × 10 sec"
+  },
+  "status": "done",
+  "type": "Pull",
+  "week": 1,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "3 Mu +5kg / 3 Mu b.w ×3 sets"
+   },
+   {
+    "slot": "Volume",
+    "text": "10 scapula pull ups + 10 sec chin over bar ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Hollow body hold 30 sec ×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Face pull with band 15×2 sets"
+   }
+  ],
+  "_id": "50"
+ },
+ {
+  "block": "50-61",
+  "day": 51,
+  "due": "2026-09-13",
+  "lifts": [
+   {
+    "best": 40,
+    "increment": 2.5,
+    "incrementFast": 5,
+    "key": "dip",
+    "load": 20,
+    "name": "Weighted dips",
+    "repMax": 8,
+    "repMin": 5,
+    "sets": 3
+   }
+  ],
+  "log": {
+   "done": {
+    "0": true,
+    "1": false,
+    "2": false,
+    "3": false
+   },
+   "lifts": {
+    "dip": [
+     {
+      "kg": 20,
+      "reps": 8
+     },
+     {
+      "kg": 20,
+      "reps": 8
+     },
+     {
+      "kg": 20,
+      "reps": 8
+     }
+    ]
+   },
+   "notes": ""
+  },
+  "loggedAt": "2026-09-14",
+  "order": 2,
+  "skill": {
+   "name": "Pseudo-planche push ups",
+   "target": "3 × 6–8"
+  },
+  "status": "done",
+  "type": "Push",
+  "week": 1,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "10 dips +10kg / 10 dips b.w ×3 sets"
+   },
+   {
+    "slot": "Volume",
+    "text": "15 diamond push ups / 15 push ups ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Toes-to-bar 10×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Shoulder mobility + rotator cuff band 15×2 sets"
+   }
+  ],
+  "_id": "51"
+ },
+ {
+  "block": "50-61",
+  "day": 52,
+  "due": "2026-09-15",
+  "lifts": [
+   {
+    "best": null,
+    "cue": "Capped at 20kg, so the work comes from reps and tempo — 3 sec down, no bounce.",
+    "key": "squat",
+    "load": 20,
+    "maxLoad": 20,
+    "name": "Squat",
+    "progress": "reps",
+    "repMax": 20,
+    "repMin": 12,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 3,
+  "skill": {
+   "name": "Pistol squat",
+   "target": "3 × 5 each leg"
+  },
+  "status": "planned",
+  "type": "Legs",
+  "week": 1,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "20 calves raises +20kg ×3 sets — +2.5kg when you hit 20/20/20"
+   },
+   {
+    "slot": "Volume",
+    "text": "15 jumping lunges / 15 box jumps ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Hollow body hold 45 sec ×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Legs and hip mobility and stretches"
+   }
+  ],
+  "_id": "52"
+ },
+ {
+  "block": "50-61",
+  "day": 53,
+  "due": "2026-09-17",
+  "lifts": [],
+  "log": {},
+  "loggedAt": null,
+  "order": 4,
+  "skill": {
+   "name": "Wall handstand hold",
+   "target": "5 × 20–30 sec"
+  },
+  "status": "planned",
+  "type": "Supersets",
+  "week": 2,
+  "work": [
+   {
+    "slot": "Set A",
+    "text": "3 Mu / 10 stbd / 8 pull ups ×3 sets"
+   },
+   {
+    "slot": "Set B",
+    "text": "20 push ups / 2 Mu ×3 sets"
+   },
+   {
+    "slot": "Set C",
+    "text": "Emom 5 mins — 5 dips + 5 pull ups"
+   },
+   {
+    "slot": "Core",
+    "text": "V ups 20×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Wrist and forearm exercises 10×2 sets"
+   }
+  ],
+  "_id": "53"
+ },
+ {
+  "block": "50-61",
+  "day": 54,
+  "due": "2026-09-20",
+  "lifts": [
+   {
+    "best": 40,
+    "increment": 2.5,
+    "incrementFast": 5,
+    "key": "pullup",
+    "load": 25,
+    "name": "Weighted pull ups",
+    "repMax": 5,
+    "repMin": 3,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 5,
+  "skill": {
+   "name": "Front lever — tuck hold",
+   "target": "5 × 10 sec"
+  },
+  "status": "planned",
+  "type": "Pull",
+  "week": 2,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "3 Mu +5kg / 3 Mu b.w ×3 sets"
+   },
+   {
+    "slot": "Volume",
+    "text": "10 scapula pull ups + 10 sec chin over bar ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Hollow body hold 30 sec ×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Face pull with band 15×2 sets"
+   }
+  ],
+  "_id": "54"
+ },
+ {
+  "block": "50-61",
+  "day": 55,
+  "due": "2026-09-22",
+  "lifts": [
+   {
+    "best": 40,
+    "increment": 2.5,
+    "incrementFast": 5,
+    "key": "dip",
+    "load": 25,
+    "name": "Weighted dips",
+    "repMax": 8,
+    "repMin": 5,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 6,
+  "skill": {
+   "name": "Pseudo-planche push ups",
+   "target": "3 × 6–8"
+  },
+  "status": "planned",
+  "type": "Push",
+  "week": 2,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "10 dips +10kg / 10 dips b.w ×3 sets"
+   },
+   {
+    "slot": "Volume",
+    "text": "15 diamond push ups / 15 push ups ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Toes-to-bar 10×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Shoulder mobility + rotator cuff band 15×2 sets"
+   }
+  ],
+  "_id": "55"
+ },
+ {
+  "block": "50-61",
+  "day": 56,
+  "due": "2026-09-24",
+  "lifts": [
+   {
+    "best": null,
+    "cue": "Capped at 20kg, so the work comes from reps and tempo — 3 sec down, no bounce.",
+    "key": "squat",
+    "load": 20,
+    "maxLoad": 20,
+    "name": "Squat",
+    "progress": "reps",
+    "repMax": 20,
+    "repMin": 12,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 7,
+  "skill": {
+   "name": "Pistol squat",
+   "target": "3 × 5 each leg"
+  },
+  "status": "planned",
+  "type": "Legs",
+  "week": 3,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "20 calves raises +20kg ×3 sets — +2.5kg when you hit 20/20/20"
+   },
+   {
+    "slot": "Volume",
+    "text": "15 jumping lunges / 15 box jumps ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Hollow body hold 45 sec ×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Legs and hip mobility and stretches"
+   }
+  ],
+  "_id": "56"
+ },
+ {
+  "block": "50-61",
+  "day": 57,
+  "due": "2026-09-27",
+  "lifts": [],
+  "log": {},
+  "loggedAt": null,
+  "order": 8,
+  "skill": {
+   "name": "Wall handstand hold",
+   "target": "5 × 20–30 sec"
+  },
+  "status": "planned",
+  "type": "Supersets",
+  "week": 3,
+  "work": [
+   {
+    "slot": "Set A",
+    "text": "3 Mu / 10 stbd / 8 pull ups ×3 sets"
+   },
+   {
+    "slot": "Set B",
+    "text": "20 push ups / 2 Mu ×3 sets"
+   },
+   {
+    "slot": "Set C",
+    "text": "Emom 5 mins — 5 dips + 5 pull ups"
+   },
+   {
+    "slot": "Core",
+    "text": "V ups 20×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Wrist and forearm exercises 10×2 sets"
+   }
+  ],
+  "_id": "57"
+ },
+ {
+  "block": "50-61",
+  "day": 58,
+  "due": "2026-09-29",
+  "lifts": [
+   {
+    "best": 40,
+    "increment": 2.5,
+    "incrementFast": 5,
+    "key": "pullup",
+    "load": 25,
+    "name": "Weighted pull ups",
+    "repMax": 5,
+    "repMin": 3,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 9,
+  "skill": {
+   "name": "Front lever — tuck hold",
+   "target": "5 × 10 sec"
+  },
+  "status": "planned",
+  "type": "Pull",
+  "week": 3,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "3 Mu +5kg / 3 Mu b.w ×3 sets"
+   },
+   {
+    "slot": "Volume",
+    "text": "10 scapula pull ups + 10 sec chin over bar ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Hollow body hold 30 sec ×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Face pull with band 15×2 sets"
+   }
+  ],
+  "_id": "58"
+ },
+ {
+  "block": "50-61",
+  "day": 59,
+  "due": "2026-10-01",
+  "lifts": [
+   {
+    "best": 40,
+    "increment": 2.5,
+    "incrementFast": 5,
+    "key": "dip",
+    "load": 25,
+    "name": "Weighted dips",
+    "repMax": 8,
+    "repMin": 5,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 10,
+  "skill": {
+   "name": "Pseudo-planche push ups",
+   "target": "3 × 6–8"
+  },
+  "status": "planned",
+  "type": "Push",
+  "week": 4,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "10 dips +10kg / 10 dips b.w ×3 sets"
+   },
+   {
+    "slot": "Volume",
+    "text": "15 diamond push ups / 15 push ups ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Toes-to-bar 10×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Shoulder mobility + rotator cuff band 15×2 sets"
+   }
+  ],
+  "_id": "59"
+ },
+ {
+  "block": "50-61",
+  "day": 60,
+  "due": "2026-10-04",
+  "lifts": [
+   {
+    "best": null,
+    "cue": "Capped at 20kg, so the work comes from reps and tempo — 3 sec down, no bounce.",
+    "key": "squat",
+    "load": 20,
+    "maxLoad": 20,
+    "name": "Squat",
+    "progress": "reps",
+    "repMax": 20,
+    "repMin": 12,
+    "sets": 3
+   }
+  ],
+  "log": {},
+  "loggedAt": null,
+  "order": 11,
+  "skill": {
+   "name": "Pistol squat",
+   "target": "3 × 5 each leg"
+  },
+  "status": "planned",
+  "type": "Legs",
+  "week": 4,
+  "work": [
+   {
+    "slot": "Volume",
+    "text": "20 calves raises +20kg ×3 sets — +2.5kg when you hit 20/20/20"
+   },
+   {
+    "slot": "Volume",
+    "text": "15 jumping lunges / 15 box jumps ×3 sets"
+   },
+   {
+    "slot": "Core",
+    "text": "Hollow body hold 45 sec ×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Legs and hip mobility and stretches"
+   }
+  ],
+  "_id": "60"
+ },
+ {
+  "block": "50-61",
+  "day": 61,
+  "due": "2026-10-06",
+  "lifts": [],
+  "log": {},
+  "loggedAt": null,
+  "order": 12,
+  "skill": {
+   "name": "Wall handstand hold",
+   "target": "5 × 20–30 sec"
+  },
+  "status": "planned",
+  "type": "Supersets",
+  "week": 4,
+  "work": [
+   {
+    "slot": "Set A",
+    "text": "3 Mu / 10 stbd / 8 pull ups ×3 sets"
+   },
+   {
+    "slot": "Set B",
+    "text": "20 push ups / 2 Mu ×3 sets"
+   },
+   {
+    "slot": "Set C",
+    "text": "Emom 5 mins — 5 dips + 5 pull ups"
+   },
+   {
+    "slot": "Core",
+    "text": "V ups 20×3 sets"
+   },
+   {
+    "slot": "Access.",
+    "text": "Wrist and forearm exercises 10×2 sets"
+   }
+  ],
+  "_id": "61"
+ }
+]
