@@ -8,4 +8,6 @@ export * from './LiftLogger';
 export * from './WorkChecklist';
 export * from './UndoBar';
 export * from './SessionLogger';
+export * from './SessionRow';
+export * from './JournalEntry';
 export * from './AppLayout';

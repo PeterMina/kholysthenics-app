@@ -1,7 +1,4 @@
-import { Text } from '@mantine/core';
 import { createLazyFileRoute } from '@tanstack/react-router';
-import type { ReactElement } from 'react';
+import { BlockPage } from '@/modules/training';
 
-const ComingNext = (): ReactElement => <Text c="dimmed">This view arrives in the next step.</Text>;
-
-export const Route = createLazyFileRoute('/_authenticated/block')({ component: ComingNext });
+export const Route = createLazyFileRoute('/_authenticated/block')({ component: BlockPage });
