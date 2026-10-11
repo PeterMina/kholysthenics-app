@@ -1,11 +1,11 @@
 import type { SessionsSnapshot } from '.';
 
-export interface SyncStatus {
+export interface SyncStatusLine {
   tone: 'ok' | 'waiting' | 'problem';
   text: string;
 }
 
-export const syncStatusText = (snapshot: SessionsSnapshot): SyncStatus => {
+export const syncStatusText = (snapshot: SessionsSnapshot): SyncStatusLine => {
   const { pendingCount, problem } = snapshot;
   if (pendingCount > 0 && (!problem || problem.kind === 'network' || problem.kind === 'rate_limited')) {
     const noun = pendingCount === 1 ? 'change' : 'changes';

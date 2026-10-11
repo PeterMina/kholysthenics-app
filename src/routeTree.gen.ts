@@ -8,51 +8,203 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
+import { createFileRoute } from '@tanstack/react-router'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as UnauthenticatedRouteRouteImport } from './routes/_unauthenticated/route'
+
+const AuthenticatedIndexLazyRouteImport = createFileRoute('/_authenticated/')()
+const AuthenticatedBlockLazyRouteImport = createFileRoute(
+  '/_authenticated/block',
+)()
+const AuthenticatedHistoryLazyRouteImport = createFileRoute(
+  '/_authenticated/history',
+)()
+const AuthenticatedSettingsLazyRouteImport = createFileRoute(
+  '/_authenticated/settings',
+)()
+const UnauthenticatedSetupLazyRouteImport = createFileRoute(
+  '/_unauthenticated/setup',
+)()
+
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UnauthenticatedRouteRoute = UnauthenticatedRouteRouteImport.update({
+  id: '/_unauthenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedIndexLazyRoute = AuthenticatedIndexLazyRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any).lazy(() =>
+  import('./routes/_authenticated/index.lazy').then((d) => d.Route),
+)
+const AuthenticatedBlockLazyRoute = AuthenticatedBlockLazyRouteImport.update({
+  id: '/block',
+  path: '/block',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any).lazy(() =>
+  import('./routes/_authenticated/block.lazy').then((d) => d.Route),
+)
+const AuthenticatedHistoryLazyRoute =
+  AuthenticatedHistoryLazyRouteImport.update({
+    id: '/history',
+    path: '/history',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any).lazy(() =>
+    import('./routes/_authenticated/history.lazy').then((d) => d.Route),
+  )
+const AuthenticatedSettingsLazyRoute =
+  AuthenticatedSettingsLazyRouteImport.update({
+    id: '/settings',
+    path: '/settings',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any).lazy(() =>
+    import('./routes/_authenticated/settings.lazy').then((d) => d.Route),
+  )
+const UnauthenticatedSetupLazyRoute =
+  UnauthenticatedSetupLazyRouteImport.update({
+    id: '/setup',
+    path: '/setup',
+    getParentRoute: () => UnauthenticatedRouteRoute,
+  } as any).lazy(() =>
+    import('./routes/_unauthenticated/setup.lazy').then((d) => d.Route),
+  )
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+  '/': typeof AuthenticatedIndexLazyRoute
+  '/block': typeof AuthenticatedBlockLazyRoute
+  '/history': typeof AuthenticatedHistoryLazyRoute
+  '/settings': typeof AuthenticatedSettingsLazyRoute
+  '/setup': typeof UnauthenticatedSetupLazyRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+  '/': typeof AuthenticatedIndexLazyRoute
+  '/block': typeof AuthenticatedBlockLazyRoute
+  '/history': typeof AuthenticatedHistoryLazyRoute
+  '/settings': typeof AuthenticatedSettingsLazyRoute
+  '/setup': typeof UnauthenticatedSetupLazyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/_unauthenticated': typeof UnauthenticatedRouteRouteWithChildren
+  '/_authenticated/block': typeof AuthenticatedBlockLazyRoute
+  '/_authenticated/history': typeof AuthenticatedHistoryLazyRoute
+  '/_authenticated/settings': typeof AuthenticatedSettingsLazyRoute
+  '/_unauthenticated/setup': typeof UnauthenticatedSetupLazyRoute
+  '/_authenticated/': typeof AuthenticatedIndexLazyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/block' | '/history' | '/settings' | '/setup'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/block' | '/history' | '/settings' | '/setup'
+  id:
+    | '__root__'
+    | '/_authenticated'
+    | '/_unauthenticated'
+    | '/_authenticated/block'
+    | '/_authenticated/history'
+    | '/_authenticated/settings'
+    | '/_unauthenticated/setup'
+    | '/_authenticated/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  UnauthenticatedRouteRoute: typeof UnauthenticatedRouteRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_unauthenticated': {
+      id: '/_unauthenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof UnauthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/': {
+      id: '/_authenticated/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof AuthenticatedIndexLazyRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/block': {
+      id: '/_authenticated/block'
+      path: '/block'
+      fullPath: '/block'
+      preLoaderRoute: typeof AuthenticatedBlockLazyRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/history': {
+      id: '/_authenticated/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof AuthenticatedHistoryLazyRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/settings': {
+      id: '/_authenticated/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AuthenticatedSettingsLazyRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_unauthenticated/setup': {
+      id: '/_unauthenticated/setup'
+      path: '/setup'
+      fullPath: '/setup'
+      preLoaderRoute: typeof UnauthenticatedSetupLazyRouteImport
+      parentRoute: typeof UnauthenticatedRouteRoute
     }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedBlockLazyRoute: typeof AuthenticatedBlockLazyRoute
+  AuthenticatedHistoryLazyRoute: typeof AuthenticatedHistoryLazyRoute
+  AuthenticatedSettingsLazyRoute: typeof AuthenticatedSettingsLazyRoute
+  AuthenticatedIndexLazyRoute: typeof AuthenticatedIndexLazyRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedBlockLazyRoute: AuthenticatedBlockLazyRoute,
+  AuthenticatedHistoryLazyRoute: AuthenticatedHistoryLazyRoute,
+  AuthenticatedSettingsLazyRoute: AuthenticatedSettingsLazyRoute,
+  AuthenticatedIndexLazyRoute: AuthenticatedIndexLazyRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
+interface UnauthenticatedRouteRouteChildren {
+  UnauthenticatedSetupLazyRoute: typeof UnauthenticatedSetupLazyRoute
+}
+
+const UnauthenticatedRouteRouteChildren: UnauthenticatedRouteRouteChildren = {
+  UnauthenticatedSetupLazyRoute: UnauthenticatedSetupLazyRoute,
+}
+
+const UnauthenticatedRouteRouteWithChildren =
+  UnauthenticatedRouteRoute._addFileChildren(UnauthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  UnauthenticatedRouteRoute: UnauthenticatedRouteRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
