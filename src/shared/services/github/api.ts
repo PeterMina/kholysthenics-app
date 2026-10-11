@@ -1,5 +1,5 @@
 import {
-  DATA_BRANCH, DATA_FILE_PATH, DATA_REPO_NAME, DATA_REPO_OWNER, GITHUB_API_URL, GITHUB_API_VERSION,
+  DATA_BRANCH, DATA_FILE_PATH, DATA_REPO_NAME, DATA_REPO_OWNER, GITHUB_API_URL, GITHUB_API_VERSION, GITHUB_REQUEST_TIMEOUT_MS,
 } from '@/shared/constants';
 import { decodeBase64Utf8, encodeBase64Utf8, parseSessionsFile } from '@/shared/utils';
 import { contentsResponseSchema, putResponseSchema } from '@/shared/validators';
@@ -13,6 +13,8 @@ const request = async (token: string, path: string, init: RequestInit = {}): Pro
     response = await fetch(`${GITHUB_API_URL}${path}`, {
       ...init,
       cache: 'no-store',
+      // Weak gym signal can leave a request hanging; give up and fall back to the phone's copy.
+      signal: AbortSignal.timeout(GITHUB_REQUEST_TIMEOUT_MS),
       headers: {
         Authorization: `Bearer ${token}`,
         Accept: 'application/vnd.github+json',

@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { fetchSessionsFile, GitHubError, putSessionsFile } from '@/shared/services';
+import { DATA_BRANCH } from '@/shared/constants';
+import { errorForResponse, fetchSessionsFile, GitHubError, putSessionsFile } from '@/shared/services';
 import { decodeBase64Utf8, encodeBase64Utf8 } from '@/shared/utils';
 import { readFixtureText } from '@/shared/testing';
 
@@ -16,7 +17,10 @@ const stubFetch = (response: Response | Error): ReturnType<typeof vi.fn> => {
   return fetchMock;
 };
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.restoreAllMocks();
+});
 
 describe('fetchSessionsFile', () => {
   it('decodes the file and returns its sha', async () => {
@@ -26,7 +30,7 @@ describe('fetchSessionsFile', () => {
     expect(file.sha).toBe('abc');
     expect(file.sessions).toHaveLength(63);
     const [url, init] = fetchMock.mock.calls[0] as [string, RequestInit];
-    expect(url).toBe('https://api.github.com/repos/PeterMina/kholysthenics/contents/data/sessions.json?ref=main');
+    expect(url).toBe(`https://api.github.com/repos/PeterMina/kholysthenics/contents/data/sessions.json?ref=${DATA_BRANCH}`);
     expect((init.headers as Record<string, string>).Authorization).toBe(`Bearer ${TOKEN}`);
   });
 
@@ -60,6 +64,25 @@ describe('putSessionsFile', () => {
     expect(init.method).toBe('PUT');
     const body = JSON.parse(String(init.body)) as { content: string; sha: string; branch: string; message: string };
     expect(decodeBase64Utf8(body.content)).toBe('[\n {"note": "3×3 — ✅"}\n]');
-    expect(body).toMatchObject({ sha: 'old-sha', branch: 'main', message: 'chore(log): day 52 legs' });
+    expect(body).toMatchObject({ sha: 'old-sha', branch: DATA_BRANCH, message: 'chore(log): day 52 legs' });
+  });
+});
+
+describe('request timeout', () => {
+  it('gives up on a hanging request and reports no connection', async () => {
+    vi.spyOn(AbortSignal, 'timeout').mockReturnValue(AbortSignal.abort(new DOMException('timed out', 'TimeoutError')));
+    vi.stubGlobal('fetch', vi.fn(async (_url: string, init: RequestInit) => {
+      if (init.signal?.aborted) throw new DOMException('timed out', 'TimeoutError');
+      return jsonResponse(200, { content: { sha: 'never' } });
+    }));
+    await expect(fetchSessionsFile(TOKEN)).rejects.toMatchObject({ kind: 'network' });
+  });
+});
+
+describe('errorForResponse', () => {
+  it('tells the user where to replace an expired token', () => {
+    expect(errorForResponse(new Response(null, { status: 401 })).message).toBe(
+      'Your GitHub token no longer works. Replace it in Settings.',
+    );
   });
 });

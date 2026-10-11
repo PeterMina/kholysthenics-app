@@ -6,3 +6,4 @@ export const DATA_BRANCH = import.meta.env.VITE_DATA_BRANCH || DEFAULT_DATA_BRAN
 export const GITHUB_API_URL = 'https://api.github.com';
 export const GITHUB_API_VERSION = '2022-11-28';
 export const TOKEN_SETUP_URL = 'https://github.com/settings/personal-access-tokens/new';
+export const GITHUB_REQUEST_TIMEOUT_MS = 10_000;

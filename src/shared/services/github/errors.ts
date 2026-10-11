@@ -24,7 +24,7 @@ export const errorForResponse = (response: Response): GitHubError => {
   const { status } = response;
   const rateLimited = status === HTTP_TOO_MANY || (status === HTTP_FORBIDDEN && response.headers.get('x-ratelimit-remaining') === '0');
   if (rateLimited) return new GitHubError('rate_limited', 'GitHub is busy. Trying again shortly.', status);
-  if (status === HTTP_UNAUTHORIZED) return new GitHubError('auth', 'Your GitHub token no longer works. Paste a new one in Setup.', status);
+  if (status === HTTP_UNAUTHORIZED) return new GitHubError('auth', 'Your GitHub token no longer works. Replace it in Settings.', status);
   if (status === HTTP_FORBIDDEN) return new GitHubError('forbidden', NO_ACCESS_MESSAGE, status);
   if (status === HTTP_NOT_FOUND) return new GitHubError('not_found', NO_ACCESS_MESSAGE, status);
   if (status === HTTP_CONFLICT || status === HTTP_UNPROCESSABLE) return new GitHubError('conflict', 'The log changed on GitHub. Retrying.', status);
