@@ -5,3 +5,7 @@ export * from './schedule';
 export * from './mergeUpserts';
 export * from './logSession';
 export * from './undoLastLog';
+export * from './pendingQueue';
+export * from './sync';
+export * from './loadSessions';
+export * from './syncStatus';
