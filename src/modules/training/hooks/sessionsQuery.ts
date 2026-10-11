@@ -3,6 +3,12 @@ import { SESSIONS_STALE_MS, SYNC_RETRY_INTERVAL_MS, sessionKeys } from '@/module
 import { createGitHubDeps, loadSessions, type SessionsSnapshot } from '@/modules/training/utils';
 import { getToken } from '@/shared/services';
 
+const IMMEDIATELY_STALE = 0;
+
+/** Changes still waiting, or the last sync failed: try again whenever there is a chance. */
+const needsSync = (data: SessionsSnapshot | undefined): boolean =>
+  data !== undefined && (data.problem !== null || data.pendingCount > 0);
+
 // Return type inferred on purpose: queryOptions' generic carries the query key type.
 export const sessionsQueryOptions = () =>
   queryOptions({
@@ -11,13 +17,12 @@ export const sessionsQueryOptions = () =>
       const token = getToken();
       return loadSessions(token ? createGitHubDeps(token) : null);
     },
-    staleTime: SESSIONS_STALE_MS,
+    // An offline fallback is still a successful fetch; without this it would count as
+    // fresh and coming back online or reopening the app would not sync.
+    staleTime: (query) => (needsSync(query.state.data) ? IMMEDIATELY_STALE : SESSIONS_STALE_MS),
     refetchOnWindowFocus: true,
     refetchOnReconnect: true,
-    refetchInterval: (query) => {
-      const data = query.state.data;
-      return data && (data.problem || data.pendingCount > 0) ? SYNC_RETRY_INTERVAL_MS : false;
-    },
+    refetchInterval: (query) => (needsSync(query.state.data) ? SYNC_RETRY_INTERVAL_MS : false),
   });
 
 export const useSessions = (): SessionsSnapshot => useSuspenseQuery(sessionsQueryOptions()).data;
