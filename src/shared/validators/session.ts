@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+export const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
 export const SESSION_TYPES = ['Pull', 'Push', 'Legs', 'Supersets'] as const;
 export const sessionTypeSchema = z.enum(SESSION_TYPES);
@@ -51,7 +51,7 @@ export const sessionSchema = z.looseObject({
   order: z.number(),
   block: z.string().min(1),
   status: z.enum(['planned', 'done']),
-  loggedAt: z.string().regex(ISO_DATE).nullable(),
+  loggedAt: z.string().regex(ISO_DATE_PATTERN).nullable(),
   skill: z.object({ name: z.string(), target: z.string() }).optional(),
   lifts: z.array(liftSchema),
   work: z.array(workItemSchema),

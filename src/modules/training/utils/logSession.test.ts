@@ -51,4 +51,8 @@ describe('logSession', () => {
     expect(() => logSession(sessions, '54', draft({ pullup: reps([5, 5, 5], 25) }, { date: '2026-10-13' }), TODAY)).toThrow("can't be in the future");
     expect(() => logSession(sessions, '50', draft({ pullup: reps([5, 5, 5], 25) }), TODAY)).toThrow('already logged');
   });
+
+  it('refuses a cleared training date', () => {
+    expect(() => logSession(fixtureSessions(), '54', draft({ pullup: reps([5, 5, 5], 25) }, { date: '' }), TODAY)).toThrow('Pick the training date.');
+  });
 });

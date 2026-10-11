@@ -1,5 +1,5 @@
 import { formatKg } from '@/shared/utils';
-import type { AppliedChange, Lift, LoggedSet, Session } from '@/shared/validators';
+import { ISO_DATE_PATTERN, type AppliedChange, type Lift, type LoggedSet, type Session } from '@/shared/validators';
 import { blockSessions, evaluateLift, previousLoggedSets, type SetEntry, type Verdict } from '.';
 
 export interface LogDraft {
@@ -91,6 +91,7 @@ const describeSets = (lift: Lift, sets: readonly LoggedSet[], kgUsed: number): s
 const checkLoggable = (session: Session | undefined, sessionId: string, draft: LogDraft, today: string): Session => {
   if (!session) throw new LogValidationError(`Session ${sessionId} not found.`);
   if (session.status === 'done') throw new LogValidationError(`Day ${session.day} is already logged.`);
+  if (!ISO_DATE_PATTERN.test(draft.date)) throw new LogValidationError('Pick the training date.');
   if (draft.date > today) throw new LogValidationError("The training date can't be in the future.");
   return session;
 };
