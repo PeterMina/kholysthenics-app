@@ -1,8 +1,15 @@
 import { PENDING_QUEUE_KEY, SESSIONS_CACHE_KEY } from '@/shared/constants';
 import { readJson, writeJson } from '@/shared/utils';
-import { cachedSessionsSchema, pendingQueueSchema, type PendingChange, type Session } from '@/shared/validators';
+import {
+  cachedSessionsSchema, checkKeepingOrder, pendingChangeSchema, storedListSchema, type PendingChange, type Session,
+} from '@/shared/validators';
 
-export const readPending = (): PendingChange[] => readJson(PENDING_QUEUE_KEY, pendingQueueSchema) ?? [];
+/** Validates each stored change on its own, so one bad entry never empties the whole queue. */
+export const readPending = (): PendingChange[] =>
+  (readJson(PENDING_QUEUE_KEY, storedListSchema) ?? []).flatMap((entry) => {
+    const checked = checkKeepingOrder(pendingChangeSchema, entry);
+    return checked.ok ? [checked.value] : [];
+  });
 
 export const enqueuePending = (change: PendingChange): void => {
   writeJson(PENDING_QUEUE_KEY, [...readPending(), change]);
