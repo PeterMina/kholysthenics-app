@@ -4,7 +4,10 @@ import '@mantine/core/styles.layer.css';
 import '@mantine/notifications/styles.layer.css';
 import '@/index.css';
 import '@/App.css';
+import { registerSW } from 'virtual:pwa-register';
 import { App } from '@/App';
+
+registerSW({ immediate: true });
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
