@@ -7,7 +7,7 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 const BASE_PATH = '/kholysthenics-app/';
-const THEME_COLOR = '#1f5fb3';
+const THEME_COLOR = '#14181d';
 const BACKGROUND_COLOR = '#eef1f4';
 const FONT_CACHE_SECONDS = 60 * 60 * 24 * 365;
 const FONT_CACHE_ENTRIES = 20;
