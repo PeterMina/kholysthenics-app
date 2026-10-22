@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#1f5fb3"/>
-  <circle cx="256" cy="256" r="150" fill="none" stroke="#ffffff" stroke-width="44"/>
-  <circle cx="256" cy="256" r="34" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kholysthenics">
+  <title>Kholysthenics</title>
+  <rect width="512" height="512" rx="96" fill="#14181d"/>
+  <rect x="118" y="134" width="30" height="244" rx="15" fill="#ffffff"/>
+  <rect x="186" y="134" width="30" height="244" rx="15" fill="#ffffff"/>
+  <rect x="254" y="134" width="30" height="244" rx="15" fill="#ffffff"/>
+  <rect x="322" y="134" width="30" height="244" rx="15" fill="#ffffff"/>
+  <path d="M104 358 L366 154"
+        stroke="#c0333c" stroke-width="28" stroke-linecap="round"/>
 </svg>
