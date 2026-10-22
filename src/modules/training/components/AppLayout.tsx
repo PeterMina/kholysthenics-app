@@ -4,7 +4,7 @@ import { useCallback, useMemo, type ReactElement } from 'react';
 import { NAV_TABS } from '@/modules/training/constants';
 import { useSessions } from '@/modules/training/hooks';
 import { blockSessions } from '@/modules/training/utils';
-import { BlockMeter, SyncStatus } from '.';
+import { BlockMeter, DailyLine, SyncStatus } from '.';
 
 export const AppLayout = (): ReactElement => {
   const navigate = useNavigate();
@@ -41,6 +41,7 @@ export const AppLayout = (): ReactElement => {
             ))}
           </Tabs.List>
         </Tabs>
+        <DailyLine />
         <SyncStatus snapshot={snapshot} />
         <Outlet />
       </Stack>

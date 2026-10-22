@@ -12,3 +12,4 @@ export * from './sync';
 export * from './loadSessions';
 export * from './syncStatus';
 export * from './summaries';
+export * from './dailyLine';
