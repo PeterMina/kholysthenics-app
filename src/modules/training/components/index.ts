@@ -10,4 +10,5 @@ export * from './UndoBar';
 export * from './SessionLogger';
 export * from './SessionRow';
 export * from './JournalEntry';
+export * from './DailyLine';
 export * from './AppLayout';
