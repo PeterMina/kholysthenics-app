@@ -1,8 +1,8 @@
 import { Button, Divider, Group, Paper, Stack, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
-import { useCallback, useMemo, type ChangeEvent, type ReactElement, type ReactNode } from 'react';
+import { useCallback, useMemo, useState, type ChangeEvent, type ReactElement, type ReactNode } from 'react';
 import { useDraft, useSessionChange } from '@/modules/training/hooks';
-import { logSession, LogValidationError, previousLoggedSets, type SetEntry } from '@/modules/training/utils';
+import { logSession, LogValidationError, previousLoggedSets, skipSession, type SetEntry } from '@/modules/training/utils';
 import { formatShortDate, formatWeekday, todayIso } from '@/shared/utils';
 import type { Session } from '@/shared/validators';
 import { LiftLogger, WorkChecklist } from '.';
@@ -30,6 +30,8 @@ const Section = ({ label, children }: SectionProps): ReactElement => (
 
 export const SessionLogger = ({ session, sessions, due }: SessionLoggerProps): ReactElement => {
   const [draft, setDraft, removeDraft] = useDraft(session);
+  const [skipReason, setSkipReason] = useState('');
+  const [skipOpen, setSkipOpen] = useState(false);
   const change = useSessionChange();
   const today = todayIso();
   const dueLabel = useMemo(() => (due === null ? '' : due === today ? 'Today' : formatWeekday(due)), [due, today]);
@@ -59,6 +61,20 @@ export const SessionLogger = ({ session, sessions, due }: SessionLoggerProps): R
       notifications.show({ color: 'red', message: error.message });
     }
   }, [sessions, session, draft, today, removeDraft, change]);
+
+  const handleSkip = useCallback((): void => {
+    try {
+      const result = skipSession(sessions, session._id, skipReason, today);
+      removeDraft();
+      setSkipOpen(false);
+      setSkipReason('');
+      change.mutate(result);
+      notifications.show({ color: 'gray', message: [`Day ${session.day} skipped.`, ...result.notices].join(' ') });
+    } catch (error) {
+      if (!(error instanceof LogValidationError)) throw error;
+      notifications.show({ color: 'red', message: error.message });
+    }
+  }, [sessions, session, skipReason, today, removeDraft, change]);
 
   return (
     <Paper withBorder radius="lg">
@@ -110,6 +126,33 @@ export const SessionLogger = ({ session, sessions, due }: SessionLoggerProps): R
           onChange={handleNotes}
         />
         <Button id="log-session" size="lg" onClick={handleLog} loading={change.isPending}>Log Day {session.day}</Button>
+      </Section>
+      <Section label="Can't train it">
+        {skipOpen ? (
+          <>
+            <TextInput
+              id="skip-reason"
+              label="Why"
+              placeholder="Injured, ill, travelling"
+              value={skipReason}
+              onChange={(event) => setSkipReason(event.currentTarget.value)}
+            />
+            <Text size="xs" c="dimmed">
+              Skipping moves no weight. The next sessions keep the load you have now, to be earned
+              when you are back.
+            </Text>
+            <Group grow>
+              <Button variant="default" onClick={() => setSkipOpen(false)}>Cancel</Button>
+              <Button id="skip-session" color="gray" onClick={handleSkip} loading={change.isPending}>
+                Skip Day {session.day}
+              </Button>
+            </Group>
+          </>
+        ) : (
+          <Button id="skip-open" variant="subtle" color="gray" onClick={() => setSkipOpen(true)}>
+            Skip this one
+          </Button>
+        )}
       </Section>
     </Paper>
   );

@@ -7,8 +7,12 @@ export const blockSessions = (sessions: readonly Session[]): Session[] =>
 export const archiveSessions = (sessions: readonly Session[]): Session[] =>
   sessions.filter((s) => s.block === ARCHIVE_BLOCK).sort((a, b) => b.order - a.order);
 
+/** The next session to train. A skipped session has left the queue, like a logged one. */
 export const nextSession = (sessions: readonly Session[]): Session | null =>
-  blockSessions(sessions).find((s) => s.status !== 'done') ?? null;
+  blockSessions(sessions).find((s) => s.status === 'planned') ?? null;
+
+export const skippedSessions = (sessions: readonly Session[]): Session[] =>
+  blockSessions(sessions).filter((s) => s.status === 'skipped');
 
 export const previousLoggedSets = (
   sessions: readonly Session[],

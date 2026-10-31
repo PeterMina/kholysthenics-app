@@ -7,8 +7,10 @@ export interface UndoResult extends SessionChange {
 }
 
 export const lastUndoable = (sessions: readonly Session[]): Session | null => {
-  const last = blockSessions(sessions).filter((s) => s.status === 'done').at(-1);
-  return last && Array.isArray(last.applied) ? last : null;
+  const last = blockSessions(sessions)
+    .filter((s) => (s.status === 'done' && Array.isArray(s.applied)) || s.status === 'skipped')
+    .at(-1);
+  return last ?? null;
 };
 
 export const undoLastLog = (sessions: readonly Session[], today: string): UndoResult | null => {
@@ -34,6 +36,20 @@ export const undoLastLog = (sessions: readonly Session[], today: string): UndoRe
 
   const reopened = edit(target._id);
   if (!reopened) return null;
+
+  if (target.status === 'skipped') {
+    reopened.status = 'planned';
+    reopened.skippedAt = null;
+    delete reopened.skipReason;
+    const empty: LogDraft = { lifts: {}, done: {}, notes: '', date: today };
+    return {
+      upserts: [...working.values()],
+      message: `chore(log): un-skip day ${target.day}`,
+      notices: [],
+      sessionId: target._id,
+      draft: empty,
+    };
+  }
   const draft: LogDraft = {
     lifts: reopened.log.lifts ?? {},
     done: reopened.log.done ?? {},
