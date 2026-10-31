@@ -55,7 +55,7 @@ const applyNextLoad = (
 ): string | null => {
   if (verdict.nextLoad === null) return null;
   const nextLoad = verdict.nextLoad;
-  const upcoming = blockSessions(sessions).filter((s) => s.status !== 'done' && s.order > current.order && findLift(s, lift.key));
+  const upcoming = blockSessions(sessions).filter((s) => s.status === 'planned' && s.order > current.order && findLift(s, lift.key));
   const changing = upcoming.filter((s) => findLift(s, lift.key)?.load !== nextLoad);
   for (const session of changing) {
     const target = findLift(edit(session._id), lift.key);
@@ -91,6 +91,7 @@ const describeSets = (lift: Lift, sets: readonly LoggedSet[], kgUsed: number): s
 const checkLoggable = (session: Session | undefined, sessionId: string, draft: LogDraft, today: string): Session => {
   if (!session) throw new LogValidationError(`Session ${sessionId} not found.`);
   if (session.status === 'done') throw new LogValidationError(`Day ${session.day} is already logged.`);
+  if (session.status === 'skipped') throw new LogValidationError(`Day ${session.day} was skipped. Undo the skip first.`);
   if (!ISO_DATE_PATTERN.test(draft.date)) throw new LogValidationError('Pick the training date.');
   if (draft.date > today) throw new LogValidationError("The training date can't be in the future.");
   return session;
